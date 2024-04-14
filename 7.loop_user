@@ -1,0 +1,15 @@
+def countdown():
+    try:
+        # Ask the user for a number
+        num = int(input("Enter a number to start the countdown: "))
+
+        # Print the countdown
+        print("Countdown:")
+        while num >= 0:
+            print(num)
+            num -= 1
+    except ValueError:
+        print("Please enter a valid integer.")
+
+if __name__ == "__main__":
+    countdown()

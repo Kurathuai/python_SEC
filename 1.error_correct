@@ -1,0 +1,12 @@
+# Intentional Indentation Error
+def print_numbers():
+for i in range(1, 6):
+print(i)
+
+# Corrected Code
+def print_numbers_corrected():
+    for i in range(1, 6):
+        print(i)
+
+# Call the function with intentional error
+print_numbers()

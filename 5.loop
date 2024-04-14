@@ -1,0 +1,9 @@
+def main():
+    fractions = [2, 3, 4, 10]  # Denominators of the fractions
+
+    for denominator in fractions:
+        decimal_equivalent = 1 / denominator
+        print(f"1/{denominator} = {decimal_equivalent:.2f}")
+
+if __name__ == "__main__":
+    main()

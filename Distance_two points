@@ -1,0 +1,23 @@
+import math
+
+def distance_between_points(x1, y1, x2, y2):
+    distance = math.sqrt((x2 - x1) ** 2 + (y2 - y1) ** 2)
+    return distance
+
+def main():
+    # Input for the coordinates of the first point
+    x1 = float(input("Enter the x-coordinate of the first point: "))
+    y1 = float(input("Enter the y-coordinate of the first point: "))
+
+    # Input for the coordinates of the second point
+    x2 = float(input("Enter the x-coordinate of the second point: "))
+    y2 = float(input("Enter the y-coordinate of the second point: "))
+
+    # Compute the distance between the two points
+    distance = distance_between_points(x1, y1, x2, y2)
+
+    # Print the result
+    print(f"The distance between ({x1}, {y1}) and ({x2}, {y2}) is {distance:.2f} units.")
+
+if __name__ == "__main__":
+    main()

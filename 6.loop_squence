@@ -1,0 +1,10 @@
+def main():
+    # Define a list as the sequence
+    sequence = [1, 2, 3, 4, 5]
+
+    # Loop over the sequence using a for loop
+    for item in sequence:
+        print(item)
+
+if __name__ == "__main__":
+    main()

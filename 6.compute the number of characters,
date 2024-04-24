@@ -1,0 +1,23 @@
+def count_characters_words_lines(file_path):
+    try:
+        with open(file_path, 'r') as file:
+            content = file.read()
+            num_characters = len(content)
+            num_words = len(content.split())
+            num_lines = content.count('\n') + 1  # Add 1 for the last line without a newline character
+            return num_characters, num_words, num_lines
+    except FileNotFoundError:
+        print("File not found!")
+        return None, None, None
+
+def main():
+    file_path = input("Enter the path to the file: ")
+    num_characters, num_words, num_lines = count_characters_words_lines(file_path)
+
+    if num_characters is not None:
+        print("Number of characters:", num_characters)
+        print("Number of words:", num_words)
+        print("Number of lines:", num_lines)
+
+if __name__ == "__main__":
+    main()

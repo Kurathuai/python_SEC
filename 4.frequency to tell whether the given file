@@ -1,0 +1,18 @@
+import os
+
+def identify_file_type(file_path):
+    _, extension = os.path.splitext(file_path)
+    if extension == '.py':
+        return "Python program file"
+    elif extension == '.c':
+        return "C program file"
+    else:
+        return "Text file"
+
+def main():
+    file_path = input("Enter the path to the file: ")
+    file_type = identify_file_type(file_path)
+    print(f"The given file is a {file_type}.")
+
+if __name__ == "__main__":
+    main()

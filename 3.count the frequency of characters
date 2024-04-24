@@ -1,0 +1,28 @@
+def count_char_frequency(file_path):
+    try:
+        with open(file_path, 'r') as file:
+            content = file.read()
+            char_frequency = {}
+
+            for char in content:
+                if char in char_frequency:
+                    char_frequency[char] += 1
+                else:
+                    char_frequency[char] = 1
+
+            return char_frequency
+    except FileNotFoundError:
+        print("File not found!")
+        return None
+
+def main():
+    file_path = input("Enter the path to the file: ")
+    frequency = count_char_frequency(file_path)
+
+    if frequency:
+        print("Character frequency:")
+        for char, count in frequency.items():
+            print(f"{char}: {count}")
+
+if __name__ == "__main__":
+    main()

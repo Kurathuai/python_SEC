@@ -1,0 +1,15 @@
+def lists_to_dict(keys, values):
+    combined_dict = {}
+    for key, value in zip(keys, values):
+        combined_dict[key] = value
+    return combined_dict
+
+def main():
+    keys = ["name", "age", "city"]
+    values = ["Alice", 25, "New York"]
+
+    combined_dict = lists_to_dict(keys, values)
+    print("Combined Dictionary:", combined_dict)
+
+if __name__ == "__main__":
+    main()

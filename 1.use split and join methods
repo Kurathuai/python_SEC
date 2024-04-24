@@ -1,0 +1,35 @@
+def add_birthday(birthday_dict, name, date):
+    birthday_dict[name] = date
+    print("Birthday added successfully!")
+
+def find_birthday(birthday_dict, name):
+    if name in birthday_dict:
+        print(f"The birthday of {name} is {birthday_dict[name]}.")
+    else:
+        print(f"Sorry, couldn't find the birthday of {name}.")
+
+def main():
+    birthdays = {}
+
+    while True:
+        print("\n1. Add a birthday")
+        print("2. Find a birthday")
+        print("3. Exit")
+
+        choice = input("Enter your choice: ")
+
+        if choice == '1':
+            name = input("Enter the name: ")
+            date = input("Enter the birthday (DD/MM/YYYY): ")
+            add_birthday(birthdays, name, date)
+        elif choice == '2':
+            name = input("Enter the name to find the birthday: ")
+            find_birthday(birthdays, name)
+        elif choice == '3':
+            print("Exiting...")
+            break
+        else:
+            print("Invalid choice! Please enter a valid option.")
+
+if __name__ == "__main__":
+    main()

@@ -1,0 +1,29 @@
+def nearly_equal(a, b):
+    if abs(len(a) - len(b)) > 1:
+        return False
+    
+    if len(a) == len(b):
+        diff_count = sum(1 for x, y in zip(a, b) if x != y)
+        return diff_count == 1
+    
+    if len(a) > len(b):
+        for i in range(len(b)):
+            if a[:i] + a[i+1:] == b:
+                return True
+    else:
+        for i in range(len(a)):
+            if b[:i] + b[i+1:] == a:
+                return True
+    
+    return False
+a = "hello"
+b = "hallo"
+print(nearly_equal(a, b))
+
+a = "hello"
+b = "helo"
+print(nearly_equal(a, b))
+
+a = "hello"
+b = "halloo"
+print(nearly_equal(a, b))

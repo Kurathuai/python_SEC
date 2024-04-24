@@ -1,0 +1,13 @@
+def dups(lst):
+    seen = set()
+    duplicates = set()
+    
+    for item in lst:
+        if item in seen:
+            duplicates.add(item)
+        else:
+            seen.add(item)
+    
+    return list(duplicates)
+my_list = [1, 2, 3, 4, 2, 3, 5, 6, 6, 7, 8, 9, 9]
+print("Duplicates in the list:", dups(my_list))
